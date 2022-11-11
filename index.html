@@ -28,7 +28,7 @@
             <a href="./index.html" lang="en" class="logo">
               <span class="logo--color-accent">Web</span>Studio</a
             >
-            <button class="header__burger-menu">
+            <button class="header__burger-menu js-open-menu">
               <svg width="40" height="40">
                 <use href="./images/icons.svg#icon-burger-menu"></use>
               </svg>
@@ -481,7 +481,51 @@
         </div>
       </div>
     </footer>
+    <!-- Mobile-menu -->
+    <div class="mobile-menu js-menu-container">
+      <div class="container">
+        <button class="mobile-menu__button js-close-menu" type="submit">
+          <svg width="40" height="40">
+            <use href="./images/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+        <nav class="mobile-menu__nav">
+          <ul class="mobile-menu__item">
+            <li>
+              <a href="./index.html" class="mobile-menu__link"> Студія</a>
+            </li>
+            <li>
+              <a href="./portfolio.html" class="mobile-menu__link"> Портфоліо</a>
+            </li>
+            <li>
+              <a href="#" class="mobile-menu__link"> Контакти</a>
+            </li>
+          </ul>
 
+          <ul class="mobile-menu__contact">
+            <li>
+              <a href="tel:+380961111111" class="mobile-menu__link mobile-menu__tel">
+                +38 096 111 11 11
+              </a>
+            </li>
+            <li>
+              <a href="mailto:info@devstudio.com" class="mobile-menu__link mobile-menu__mail">
+                info@devstudio.com
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <ul class="mobile-menu__social">
+          <li><a href="" class="mobile-menu__link mobile-menu__social-link">Instagram</a></li>
+          <li><a href="" class="mobile-menu__link mobile-menu__social-link">Twitter</a></li>
+          <li><a href="" class="mobile-menu__link mobile-menu__social-link">Facebook</a></li>
+          <li><a href="" class="mobile-menu__link mobile-menu__social-link">LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Modal -->
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button type="button" class="modal__button" data-modal-close>
@@ -542,6 +586,7 @@
       </div>
     </div>
 
+    <script src="./js/mobile-menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>

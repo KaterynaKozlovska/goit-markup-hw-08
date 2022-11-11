@@ -1,9 +1,19 @@
 .clients {
   display: flex;
+  flex-wrap: wrap;
   gap: 30px;
 
+  @media screen and (min-width: 480px) {
+    display: flex;
+    gap: 30px;
+  }
+
   &__item {
-    width: calc((100% - 150px) / 6);
+    width: calc((100% - 30px) / 2);
+
+    @media screen and (min-width: 480px) {
+      width: calc((100% - 150px) / 6);
+    }
   }
 
   &__link {
