@@ -1,0 +1,37 @@
+.footer {
+  background-color: $backgroud-primary-color;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  &__blok {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 70px;
+  }
+
+  &__text {
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+    color: $white-color;
+  }
+
+  &__form {
+    display: flex;
+    gap: 12px;
+  }
+
+  &__input {
+    padding-left: 16px;
+    width: 358px;
+    background-color: $backgroud-primary-color;
+    color: $secondary-color;
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+  }
+}

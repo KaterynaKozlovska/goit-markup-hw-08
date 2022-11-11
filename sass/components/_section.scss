@@ -1,0 +1,22 @@
+.section {
+  padding: 94px 0;
+
+  &__title {
+  margin-bottom: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+}
+&__team {
+  background-color: $background-secondary-color;
+}
+&__work {
+  padding-top: 0;
+}
+}
+
+
