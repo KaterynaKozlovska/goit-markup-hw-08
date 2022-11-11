@@ -230,13 +230,18 @@ img {
 }
 
 .contact {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   gap: 30px;
+}
+@media screen and (min-width: 480px) {
+  .contact {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 .contact__link {
   display: -webkit-box;
@@ -336,7 +341,19 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   gap: 93px;
+}
+.header__burger-menu {
+  border: none;
+  background-color: #ffffff;
+}
+@media screen and (min-width: 480px) {
+  .header__burger-menu {
+    display: none;
+  }
 }
 
 .hero {
@@ -393,13 +410,18 @@ img {
 }
 
 .menu {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   gap: 50px;
+}
+@media screen and (min-width: 480px) {
+  .menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 .menu__link {
   position: relative;

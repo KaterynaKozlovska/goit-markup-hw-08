@@ -10,6 +10,16 @@
   &__nav {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     gap: 93px;
+  }
+
+  &__burger-menu {
+    border: none;
+    background-color: $white-color;
+
+    @media screen and (min-width: 480px) {
+      display: none;
+    }
   }
 }

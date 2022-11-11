@@ -1,7 +1,11 @@
 .menu {
-  display: flex;
+  display: none;
   align-items: center;
   gap: 50px;
+
+  @media screen and (min-width: 480px) {
+    display: flex;
+  }
 
   &__link {
     position: relative;

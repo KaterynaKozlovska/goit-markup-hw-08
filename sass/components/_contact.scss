@@ -1,7 +1,11 @@
 .contact {
-  display: flex;
+  display: none;
   align-items: center;
   gap: 30px;
+
+  @media screen and (min-width: 480px) {
+    display: flex;
+  }
 
   &__link {
     display: flex;
