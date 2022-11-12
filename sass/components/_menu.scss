@@ -3,7 +3,11 @@
   align-items: center;
   gap: 50px;
 
-  @media screen and (min-width: 480px) {
+  @media screen and (min-width: $tablet) {
+    display: flex;
+  }
+
+  @media screen and (min-width: $desktop) {
     display: flex;
   }
 

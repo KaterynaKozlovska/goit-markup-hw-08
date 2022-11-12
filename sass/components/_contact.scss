@@ -1,18 +1,22 @@
 .contact {
   display: none;
-  align-items: center;
-  gap: 30px;
 
-  @media screen and (min-width: 480px) {
+  @media screen and (min-width: $tablet) {
+    display: block;
+    padding: 21px 0;
+  }
+
+  @media screen and (min-width: $desktop) {
     display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 0;
   }
 
   &__link {
     display: flex;
     align-items: center;
     gap: 10px;
-    padding-top: 32px;
-    padding-bottom: 32px;
 
     transition-property: color;
     transition-duration: 250ms;
@@ -26,9 +30,23 @@
     letter-spacing: 0.02em;
     text-decoration: none;
 
+    @media screen and (min-width: $desktop) {
+      padding-top: 32px;
+      padding-bottom: 32px;
+    }
+
     &:hover,
     &:focus {
       color: $accent-color;
+    }
+  }
+
+  &__item:not(:last-child) {
+    @media screen and (min-width: $tablet) {
+      margin-bottom: 10px;
+    }
+    @media screen and (min-width: $desktop) {
+      margin-bottom: 0;
     }
   }
 }

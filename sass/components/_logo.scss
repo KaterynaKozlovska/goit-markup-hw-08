@@ -1,13 +1,26 @@
 .logo {
-  padding-top: 24px;
-  padding-bottom: 24px;
+  padding-top: 16px;
+  padding-bottom: 16px;
 
   font-family: $secondary-font-family;
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
+  font-size: 24px;
+  line-height: 1.17;
+
   color: $logo-color;
   text-decoration: none;
+
+  @media screen and (min-width: $tablet) {
+    padding-top: 26px;
+    padding-bottom: 26px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding-top: 24px;
+    padding-bottom: 24px;
+    font-size: 26px;
+    line-height: 1.19;
+  }
 
   &--color-accent {
     color: $accent-color;
@@ -18,9 +31,9 @@
   }
 }
 
-.footer__logo {
-  display: block;
-  padding: 0;
-  margin-right: 0;
-  margin-bottom: 20px;
-}
+// .footer__logo {
+//   display: block;
+//   padding: 0;
+//   margin-right: 0;
+//   margin-bottom: 20px;
+// }
