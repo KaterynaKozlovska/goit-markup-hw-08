@@ -40,16 +40,13 @@
     }
   }
 
-  &__container {
+  &__content {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
   }
 
   &__nav {
-    // display: flex;
-    // flex-direction: column;
-    // gap: 32px;
+    margin-bottom: 302px;
   }
 
   &__contact {
@@ -67,8 +64,12 @@
 
     color: $primary-color;
   }
-  &__link:nth-child(2n + 1) {
+  &__item:not(:last-child) {
     margin-bottom: 32px;
+  }
+
+  &__item--big-margin {
+    margin-bottom: 64px;
   }
 
   &__tel {
@@ -84,13 +85,22 @@
   &__social {
     width: 100%;
     display: flex;
-    gap: 20px;
+    gap: 10px;
   }
 
   &__social-link {
+    display: flex;
+    gap: 10px;
     font-size: 18px;
     line-height: 1.22;
 
     color: $accent-color;
+  }
+
+  &__social-link::before {
+    content: '';
+    height: 22px;
+
+    border-right: 1px solid rgba(33, 33, 33, 0.2);
   }
 }
