@@ -6,16 +6,16 @@
   }
 
   &__title {
-    display: none;
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1.17;
 
     @media screen and (min-width: $desktop) {
-      display: block;
-      margin-bottom: 50px;
-      margin-left: auto;
-      margin-right: auto;
-      text-align: center;
-
-      font-weight: 700;
       font-size: 36px;
       line-height: 1.16;
     }
@@ -26,5 +26,17 @@
   }
   &__work {
     padding-top: 0;
+
+    @media screen and (min-width: $mobile) {
+      padding-bottom: 0;
+    }
+
+    @media screen and (min-width: $tablet) {
+      padding-bottom: 0;
+    }
+
+    @media screen and (min-width: $desktop) {
+      padding-bottom: 94px;
+    }
   }
 }
