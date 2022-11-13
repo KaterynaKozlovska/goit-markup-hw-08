@@ -1,7 +1,7 @@
 .work {
   display: none;
 
-  @media screen and (min-width: 480px) {
+  @media screen and (min-width: $desktop) {
     display: flex;
     flex-basis: calc((100% - 60px) / 3);
     gap: 30px;
