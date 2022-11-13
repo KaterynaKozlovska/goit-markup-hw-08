@@ -1,9 +1,9 @@
 .mobile-menu {
   position: fixed;
   top: 0;
-  left: 0;
-  max-width: 480px;
-  height: 100%;
+
+  min-width: 480px;
+  height: 796px;
   padding: 48px 40px;
   display: none;
 
@@ -20,6 +20,8 @@
     top: 10px;
     right: 15px;
     padding: 11px;
+    width: 40px;
+    height: 40px;
 
     color: $primary-color;
     background-color: $white-color;
@@ -38,13 +40,25 @@
     }
   }
 
-  &__nav {
+  &__container {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__nav {
+    // display: flex;
+    // flex-direction: column;
+    // gap: 32px;
+  }
+
+  &__contact {
+    display: block;
   }
 
   &__link {
-    margin-bottom: 32px;
+    display: block;
+
     font-weight: 500;
     font-size: 40px;
     line-height: 1.17;
@@ -52,6 +66,9 @@
     text-decoration: none;
 
     color: $primary-color;
+  }
+  &__link:nth-child(2n + 1) {
+    margin-bottom: 32px;
   }
 
   &__tel {
