@@ -23,11 +23,15 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 528px;
+  width: 450px;
   height: 581px;
   background-color: $white-color;
 
-  &__button {
+  @media screen and (min-width: $desktop) {
+    width: 528px;
+  }
+
+  &__close-button {
     position: absolute;
     top: 8px;
     right: 8px;
@@ -51,13 +55,17 @@
   }
 
   &__title {
-    margin-top: 40px;
-    margin-bottom: 12px;
+    width: 370px;
+    margin: 40px auto 12px;
+    text-align: center;
 
     font-weight: 700;
     font-size: 20px;
     line-height: 1.15;
-    text-align: center;
+
+    @media screen and (min-width: $desktop) {
+      width: 448px;
+    }
   }
 }
 
@@ -138,47 +146,53 @@
   margin-bottom: 30px;
 
   &__input {
-  appearance: none;
+    appearance: none;
 
-  transition-property: background-color, border;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: background-color, border;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &__icon {
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 0px;
+    transform: translateY(-50%);
+    border: 2px solid $primary-color;
+    border-radius: 2px;
+
+    fill: $white-color;
+
+    transition-property: background-color, border;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    @media screen and (min-width: $desktop) {
+      left: 13px;
+    }
+  }
+
+  &__input:checked + &__icon {
+    border: none;
+    background-color: $accent-color;
+  }
+
+  &__label {
+    padding-left: 24px;
+
+    font-size: 12px;
+    line-height: 1.5;
+    color: $secondary-color;
+
+    @media screen and (min-width: $desktop) {
+      padding-left: 36px;
+      font-size: 14px;
+    }
+  }
+
+  &__text {
+    text-decoration-line: underline;
+    color: $accent-color;
+  }
 }
-
-&__icon {
-  position: absolute;
-  z-index: -1;
-  top: 50%;
-  left: 13px;
-  transform: translateY(-50%);
-  border: 2px solid $primary-color;
-  border-radius: 2px;
-
-  fill: $white-color;
-
-  transition-property: background-color, border;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-&__input:checked + &__icon {
-  border: none;
-  background-color: $accent-color;
-}
-
-&__label {
-  padding-left: 36px;
-
-  font-size: 14px;
-  line-height: 1.5;
-  color: $secondary-color;
-}
-
-&__text {
-  text-decoration-line: underline;
-  color: $accent-color;
-}
-}
-
-
-
