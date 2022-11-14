@@ -3,6 +3,7 @@
   flex-wrap: wrap;
   flex-basis: calc((100% - 30px) / 2);
   gap: 30px;
+  justify-content: center;
 
   @media screen and (min-width: $tablet) {
     flex-basis: calc((100% - 60px) / 3);
@@ -15,6 +16,7 @@
 
   &__item {
     width: 210px;
+    align-items: center;
 
     @media screen and (min-width: $tablet) {
       width: 226px;

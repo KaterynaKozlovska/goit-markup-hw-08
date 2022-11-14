@@ -24,8 +24,9 @@
   left: 50%;
   transform: translate(-50%, -50%);
   width: 450px;
-  height: 581px;
+  // height: 581px;
   background-color: $white-color;
+  overflow-y: scroll;
 
   @media screen and (min-width: $desktop) {
     width: 528px;
