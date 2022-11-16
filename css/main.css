@@ -775,15 +775,6 @@ img {
 .mobile-menu__button:hover {
   fill: #2196f3;
 }
-.mobile-menu__content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
 .mobile-menu__nav {
   margin-bottom: 302px;
 }
@@ -798,6 +789,12 @@ img {
   letter-spacing: 0.02em;
   text-decoration: none;
   color: #212121;
+  -webkit-transition-property: fill;
+  transition-property: fill;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .mobile-menu__link:hover, .mobile-menu__link:focus {
   color: #2196f3;
@@ -815,10 +812,28 @@ img {
 .mobile-menu__tel {
   font-size: 34px;
   color: #2196f3;
+  -webkit-transition-property: fill;
+  transition-property: fill;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.mobile-menu__tel:hover, .mobile-menu__tel:focus {
+  color: #757575;
 }
 .mobile-menu__mail {
   font-size: 24px;
   color: #757575;
+  -webkit-transition-property: fill;
+  transition-property: fill;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.mobile-menu__mail:hover, .mobile-menu__mail:focus {
+  color: #2196f3;
 }
 .mobile-menu__social {
   width: 100%;
@@ -827,20 +842,23 @@ img {
   display: flex;
   gap: 10px;
 }
+.mobile-menu__social-item:not(:last-child) {
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+}
 .mobile-menu__social-link {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 10px;
+  padding-right: 10px;
   font-size: 18px;
   line-height: 1.22;
   color: #2196f3;
+  -webkit-transition-property: fill;
+  transition-property: fill;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.mobile-menu__social-link::before {
-  display: block;
-  content: "";
-  height: 22px;
-  border-right: 1px solid rgba(33, 33, 33, 0.2);
+.mobile-menu__social-link:hover, .mobile-menu__social-link:focus {
+  color: #757575;
 }
 
 .backdrop {
@@ -1074,12 +1092,11 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   gap: 30px;
+  height: 100%;
+  width: 100%;
 }
 @media screen and (min-width: 768px) {
   .grid {
@@ -1093,24 +1110,28 @@ img {
         flex-basis: calc((100% - 60px) / 3);
   }
 }
-
-.product {
-  text-decoration: none;
-}
-.product__image {
-  position: relative;
-  overflow: hidden;
+.grid__item {
   width: 450px;
 }
 @media screen and (min-width: 768px) {
-  .product__image {
+  .grid__item {
     width: 354px;
   }
 }
 @media screen and (min-width: 1200px) {
-  .product__image {
+  .grid__item {
     width: 370px;
   }
+}
+
+.product {
+  width: 100%;
+  text-decoration: none;
+}
+.product__image {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
 }
 .product__description {
   position: absolute;
@@ -1138,6 +1159,9 @@ img {
   -webkit-transform: translateY(0%);
           transform: translateY(0%);
 }
+.product__content {
+  width: 100%;
+}
 .product .product__content {
   -webkit-transition-property: -webkit-box-shadow;
   transition-property: -webkit-box-shadow;
@@ -1153,6 +1177,7 @@ img {
           box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 .product__text {
+  width: 100%;
   padding: 20px 24px;
   border-left: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
@@ -1165,6 +1190,16 @@ img {
   line-height: 2;
   letter-spacing: 0.06em;
   color: #212121;
+}
+@media screen and (min-width: 768px) {
+  .product__title {
+    width: 306px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .product__title {
+    width: 322px;
+  }
 }
 .product__subtitle {
   color: #757575;

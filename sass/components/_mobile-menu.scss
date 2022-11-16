@@ -46,11 +46,6 @@
     }
   }
 
-  &__content {
-    display: flex;
-    flex-direction: column;
-  }
-
   &__nav {
     margin-bottom: 302px;
   }
@@ -69,6 +64,10 @@
     text-decoration: none;
 
     color: $primary-color;
+
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
     &:hover,
     &:focus {
@@ -91,11 +90,27 @@
   &__tel {
     font-size: 34px;
     color: $accent-color;
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+      color: $secondary-color;
+    }
   }
 
   &__mail {
     font-size: 24px;
     color: $secondary-color;
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+      color: $accent-color;
+    }
   }
 
   &__social {
@@ -104,20 +119,24 @@
     gap: 10px;
   }
 
+  &__social-item:not(:last-child) {
+    border-right: 1px solid rgba(33, 33, 33, 0.2);
+  }
+
   &__social-link {
-    display: flex;
-    gap: 10px;
+    padding-right: 10px;
     font-size: 18px;
     line-height: 1.22;
 
     color: $accent-color;
-  }
 
-  &__social-link::before {
-    display: block;
-    content: '';
-    height: 22px;
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
-    border-right: 1px solid rgba(33, 33, 33, 0.2);
+    &:hover,
+    &:focus {
+      color: $secondary-color;
+    }
   }
 }
