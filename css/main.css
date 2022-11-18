@@ -548,6 +548,7 @@ img {
   padding: 10px 0;
   border: none;
   background-color: #ffffff;
+  cursor: pointer;
 }
 @media screen and (min-width: 768px) {
   .header__burger-menu {
