@@ -25,7 +25,7 @@
     color: $secondary-color;
     fill: currentColor;
     font-weight: 500;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 1.14;
     letter-spacing: 0.02em;
     text-decoration: none;
@@ -33,6 +33,7 @@
     @media screen and (min-width: $desktop) {
       padding-top: 32px;
       padding-bottom: 32px;
+      font-size: 14px;
     }
 
     &:hover,

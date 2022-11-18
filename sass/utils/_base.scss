@@ -3,21 +3,9 @@ body {
   background-color: $white-color;
   font-family: $primary-font-family;
   font-size: 16px;
-  font-weight: 400;
+
   letter-spacing: 0.03em;
   margin: 0 auto;
-
-  @media screen and (min-width: $mobile) {
-    width: $mobile;
-  }
-
-  @media screen and (min-width: $tablet) {
-    width: $tablet;
-  }
-
-  @media screen and (min-width: $desktop) {
-    width: 1600px;
-  }
 }
 
 ul {
