@@ -13,7 +13,7 @@
     0px 1px 3px rgba(0, 0, 0, 0.16);
 
   &.is-open {
-    display: block;
+    display: flex;
   }
 
   &__container {
@@ -52,8 +52,8 @@
     flex-direction: column;
   }
 
-  &__contact {
-    flex-grow: 1;
+  &__nav {
+    margin-bottom: auto;
   }
 
   &__link {
@@ -88,7 +88,6 @@
   &__item--big-margin {
     margin-bottom: 64px;
   }
-
   &__tel {
     font-size: 34px;
     color: $accent-color;

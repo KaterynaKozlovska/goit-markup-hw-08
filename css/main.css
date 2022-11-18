@@ -716,7 +716,9 @@ img {
           box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
 }
 .mobile-menu.is-open {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 .mobile-menu__container {
   margin: 0 auto;
@@ -754,10 +756,8 @@ img {
       -ms-flex-direction: column;
           flex-direction: column;
 }
-.mobile-menu__contact {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+.mobile-menu__nav {
+  margin-bottom: auto;
 }
 .mobile-menu__link {
   display: block;
