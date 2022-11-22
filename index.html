@@ -243,17 +243,44 @@
           <h2 class="section__title">Наша команда</h2>
           <ul class="team">
             <li class="team__item">
-              <img
-                class="team__img"
-                srcset="
-                  ./images/photo-ihor-desktop@1x.jpg 1x,
-                  ./images/photo-ihor-desktop@2x.jpg 2x
-                "
-                src="./images/photo-ihor-desktop@1x.jpg"
-                alt="Усміхнений чоловік в окулярах"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/photo-ihor-desktop.webp    1x,
+                    ./images/photo-ihor-desktop@2x.webp 2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="./images/photo-ihor-desktop.jpg 1x, ./images/photo-ihor-desktop@2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="./images/photo-ihor-tablet.webp 1x, ./images/photo-ihor-tablet@2x.webp 2x"
+                  media="(min-width: 768px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="./images/photo-ihor-tablet.jpg 1x, ./images/photo-ihor-tablet@2x.jpg 2x"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="./images/photo-ihor-mobile.webp 1x, ./images/photo-ihor-mobile@2x.webp 2x"
+                  media="(max-width: 767px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="./images/photo-ihor-mobile.jpg 1x, ./images/photo-ihor-mobile@2x.jpg 2x"
+                  media="(max-width: 767px)"
+                />
+
+                <img
+                  class="team__img"
+                  src="./images/photo-ihor-desktop.jpg"
+                  alt="Усміхнений чоловік в окулярах"
+                />
+              </picture>
               <div class="team__descr">
                 <h3 class="team__name">Ігор Дем'яненко</h3>
                 <p lang="en" class="team__position">Product Designer</p>
@@ -290,17 +317,45 @@
               </ul>
             </li>
             <li class="team__item">
-              <img
-                class="team__img"
-                srcset="
-                  ./images/photo-olha-desktop@1x.jpg 1x,
-                  ./images/photo-olha-desktop@2x.jpg 2x
-                "
-                src="./images/photo-olha-desktop@1x.jpg"
-                alt=" Усміхнена жінка в окулярах"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/photo-olha-desktop.webp    1x,
+                    ./images/photo-olha-desktop@2x.webp 2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="./images/photo-olha-desktop.jpg 1x, ./images/photo-olha-desktop@2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="./images/photo-olha-tablet.webp 1x, ./images/photo-olha-tablet@2x.webp 2x"
+                  media="(min-width: 768px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="./images/photo-olha-tablet.jpg 1x, ./images/photo-olha-tablet@2x.jpg 2x"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="./images/photo-olha-mobile.webp 1x, ./images/photo-olha-mobile@2x.webp 2x"
+                  media="(max-width: 767px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="./images/photo-olha-mobile.jpg 1x, ./images/photo-olha-mobile@2x.jpg 2x"
+                  media="(max-width: 767px)"
+                />
+
+                <img
+                  class="team__img"
+                  src="./images/photo-olha-desktop.jpg"
+                  alt="Усміхнена жінка в окулярах"
+                />
+              </picture>
+
               <div class="team__descr">
                 <h3 class="team__name">Ольга Рєпіна</h3>
                 <p lang="en" class="team__position">Frontend Developer</p>
@@ -337,17 +392,60 @@
               </ul>
             </li>
             <li class="team__item">
-              <img
-                class="team__img"
-                srcset="
-                  ./images/photo-mukola-desktop@1x.jpg 1x,
-                  ./images/photo-mukola-desktop@2x.jpg 2x
-                "
-                src="./images/photo-mukola-desktop@1x.jpg"
-                alt="Чоловік в окулярах"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/photo-mukola-desktop.webp    1x,
+                    ./images/photo-mukola-desktop@2x.webp 2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/photo-mukola-desktop.jpg    1x,
+                    ./images/photo-mukola-desktop@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/photo-mukola-tablet.webp    1x,
+                    ./images/photo-mukola-tablet@2x.webp 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/photo-mukola-tablet.jpg    1x,
+                    ./images/photo-mukola-tablet@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/photo-mukola-mobile.webp    1x,
+                    ./images/photo-mukola-mobile@2x.webp 2x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/photo-mukola-mobile.jpg    1x,
+                    ./images/photo-mukola-mobile@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+
+                <img
+                  class="team__img"
+                  src="./images/photo-mukola-desktop.jpg"
+                  alt="Чоловік в окулярах"
+                />
+              </picture>
+
               <div class="team__descr">
                 <h3 class="team__name">Микола Тарасов</h3>
                 <p lang="en" class="team__position">Marketing</p>
@@ -384,17 +482,60 @@
               </ul>
             </li>
             <li class="team__item">
-              <img
-                class="team__img"
-                srcset="
-                  ./images/photo-mykhailo-desktop@1x.jpg 1x,
-                  ./images/photo-mykhailo-desktop@2x.jpg 2x
-                "
-                src="./images/photo-mykhailo-desktop@1x.jpg"
-                alt="Усміхнений чоловік в окулярах"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/photo-mykhailo-desktop.webp    1x,
+                    ./images/photo-mykhailo-desktop@2x.webp 2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/photo-mykhailo-desktop.jpg    1x,
+                    ./images/photo-mykhailo-desktop@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/photo-mykhailo-tablet.webp    1x,
+                    ./images/photo-mykhailo-tablet@2x.webp 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/photo-mykhailo-tablet.jpg    1x,
+                    ./images/photo-mykhailo-tablet@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/photo-mykhailo-mobile.webp    1x,
+                    ./images/photo-mykhailo-mobile@2x.webp 2x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/photo-mykhailo-mobile.jpg    1x,
+                    ./images/photo-mykhailo-mobile@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+
+                <img
+                  class="team__img"
+                  src="./images/photo-mykhailo-desktop.jpg"
+                  alt="Усміхнений чоловік в окулярах"
+                />
+              </picture>
+
               <div class="team__descr">
                 <h3 class="team__name">Михайло Єрмаков</h3>
                 <p lang="en" class="team__position">UI Designer</p>

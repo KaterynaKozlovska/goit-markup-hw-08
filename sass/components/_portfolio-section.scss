@@ -28,8 +28,10 @@
   @media screen and (min-width: $desktop) {
     flex-basis: calc((100% - 60px) / 3);
   }
+
   &__item {
-    width: 450px;
+    width: 100%;
+    height: 100%;
 
     @media screen and (min-width: $tablet) {
       width: 354px;
@@ -45,6 +47,7 @@
 
 .product {
   width: 100%;
+  height: 100%;
   text-decoration: none;
 
   &__image {
@@ -75,7 +78,10 @@
     }
   }
   &__content {
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
     .product & {
       transition-property: box-shadow;
       transition-duration: 250ms;
@@ -89,6 +95,8 @@
   }
 
   &__text {
+    flex-grow: 1;
+    height: 100%;
     width: 100%;
     padding: 20px 24px;
     border-left: 1px solid #eeeeee;
