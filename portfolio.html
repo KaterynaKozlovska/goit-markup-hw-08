@@ -136,25 +136,113 @@
       <section class="section">
         <div class="container portfolio">
           <h1 class="visually-hidden">Портфоліо</h1>
-          <ul class="portfolio__menu">
-            <li><button type="button" class="button portfolio__button">Усі</button></li>
-            <li><button type="button" class="button portfolio__button">Веб-сайти</button></li>
-            <li><button type="button" class="button portfolio__button">Додатки</button></li>
-            <li><button type="button" class="button portfolio__button">Дизайн</button></li>
-            <li><button type="button" class="button portfolio__button">Маркетинг</button></li>
+          <ul class="portfolio__menu" id="filtersBtnList">
+            <li>
+              <button
+                type="button"
+                class="button portfolio__button all active"
+                onclick="filterSelection('all')"
+              >
+                Усі
+              </button>
+            </li>
+            <li>
+              <button
+                type="button"
+                class="button portfolio__button websites"
+                onclick="filterSelection('websites')"
+              >
+                Веб-сайти
+              </button>
+            </li>
+            <li>
+              <button
+                type="button"
+                class="button portfolio__button apps"
+                onclick="filterSelection('apps')"
+              >
+                Додатки
+              </button>
+            </li>
+            <li>
+              <button
+                type="button"
+                class="button portfolio__button design"
+                onclick="filterSelection('design')"
+              >
+                Дизайн
+              </button>
+            </li>
+            <li>
+              <button
+                type="button"
+                class="button portfolio__button marketing"
+                onclick="filterSelection('marketing')"
+              >
+                Маркетинг
+              </button>
+            </li>
           </ul>
 
           <ul class="grid">
-            <li class="grid__item">
+            <li class="grid__item websites">
               <a href="" class="product">
                 <div class="product__content">
                   <div class="product__image">
-                    <img
-                      src="./images/projectone.jpg"
-                      alt="титульна сторінка сайту"
-                      width="370"
-                      height="294"
-                    />
+                    <picture>
+                      <source
+                        srcset="
+                          ./images/portfolio/project-one-desktop.webp    1x,
+                          ./images/portfolio/project-one-desktop@2x.webp 2x
+                        "
+                        media="(min-width: 1200px)"
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="
+                          ./images/portfolio/project-one-desktop.jpg    1x,
+                          ./images/portfolio/project-one-desktop@2x.jpg 2x
+                        "
+                        media="(min-width: 1200px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/portfolio/project-one-tablet.webp    1x,
+                          ./images/portfolio/project-one-tablet@2x.webp 2x
+                        "
+                        media="(min-width: 768px)"
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="
+                          ./images/portfolio/project-one-tablet.jpg    1x,
+                          ./images/portfolio/project-one-tablet@2x.jpg 2x
+                        "
+                        media="(min-width: 768px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/portfolio/project-one-mobile.webp    1x,
+                          ./images/portfolio/project-one-mobile@2x.webp 2x
+                        "
+                        media="(max-width: 767px)"
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="
+                          ./images/portfolio/project-one-mobile.jpg    1x,
+                          ./images/portfolio/project-one-mobile@2x.jpg 2x
+                        "
+                        media="(max-width: 767px)"
+                      />
+
+                      <img
+                        class=""
+                        src="./images/portfolio/project-one-desktop.jpg"
+                        alt="титульна сторінка сайту"
+                      />
+                    </picture>
+
                     <div class="product__description">
                       <p>
                         Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та
@@ -171,16 +259,64 @@
               </a>
             </li>
 
-            <li class="grid__item">
+            <li class="grid__item design">
               <a href="" class="product">
                 <div class="product__content">
                   <div class="product__image">
-                    <img
-                      src="./images/projecttwo.jpg"
-                      alt="два хлопці грають баскетбол"
-                      width="370"
-                      height="294"
-                    />
+                    <picture>
+                      <source
+                        srcset="
+                          ./images/portfolio/project-two-desktop.webp    1x,
+                          ./images/portfolio/project-two-desktop@2x.webp 2x
+                        "
+                        media="(min-width: 1200px)"
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="
+                          ./images/portfolio/project-two-desktop.jpg    1x,
+                          ./images/portfolio/project-two-desktop@2x.jpg 2x
+                        "
+                        media="(min-width: 1200px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/portfolio/project-two-tablet.webp    1x,
+                          ./images/portfolio/project-two-tablet@2x.webp 2x
+                        "
+                        media="(min-width: 768px)"
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="
+                          ./images/portfolio/project-two-tablet.jpg    1x,
+                          ./images/portfolio/project-two-tablet@2x.jpg 2x
+                        "
+                        media="(min-width: 768px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/portfolio/project-two-mobile.webp    1x,
+                          ./images/portfolio/project-two-mobile@2x.webp 2x
+                        "
+                        media="(max-width: 767px)"
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="
+                          ./images/portfolio/project-two-mobile.jpg    1x,
+                          ./images/portfolio/project-two-mobile@2x.jpg 2x
+                        "
+                        media="(max-width: 767px)"
+                      />
+
+                      <img
+                        class=""
+                        src="./images/portfolio/project-two-desktop.jpg"
+                        alt="два хлопці грають баскетбол"
+                      />
+                    </picture>
+
                     <div class="product__description">
                       <p>
                         Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та
@@ -198,16 +334,64 @@
               </a>
             </li>
 
-            <li class="grid__item">
+            <li class="grid__item apps">
               <a href="" class="product">
                 <div class="product__content">
                   <div class="product__image">
-                    <img
-                      src="./images/projectthree.jpg"
-                      alt="назва ресторану на фоні риби"
-                      width="370"
-                      height="294"
-                    />
+                    <picture>
+                      <source
+                        srcset="
+                          ./images/portfolio/project-three-desktop.webp    1x,
+                          ./images/portfolio/project-three-desktop@2x.webp 2x
+                        "
+                        media="(min-width: 1200px)"
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="
+                          ./images/portfolio/project-three-desktop.jpg    1x,
+                          ./images/portfolio/project-three-desktop@2x.jpg 2x
+                        "
+                        media="(min-width: 1200px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/portfolio/project-three-tablet.webp    1x,
+                          ./images/portfolio/project-three-tablet@2x.webp 2x
+                        "
+                        media="(min-width: 768px)"
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="
+                          ./images/portfolio/project-three-tablet.jpg    1x,
+                          ./images/portfolio/project-three-tablet@2x.jpg 2x
+                        "
+                        media="(min-width: 768px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/portfolio/project-three-mobile.webp    1x,
+                          ./images/portfolio/project-three-mobile@2x.webp 2x
+                        "
+                        media="(max-width: 767px)"
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="
+                          ./images/portfolio/project-three-mobile.jpg    1x,
+                          ./images/portfolio/project-three-mobile@2x.jpg 2x
+                        "
+                        media="(max-width: 767px)"
+                      />
+
+                      <img
+                        class=""
+                        src="./images/portfolio/project-three-desktop.jpg"
+                        alt="назва ресторану на фоні риби"
+                      />
+                    </picture>
+
                     <div class="product__description">
                       <p>
                         Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та
@@ -225,11 +409,63 @@
               </a>
             </li>
 
-            <li class="grid__item">
+            <li class="grid__item marketing">
               <a href="" class="product">
                 <div class="product__content">
                   <div class="product__image">
-                    <img src="./images/projectfour.jpg" alt="наушники" width="370" height="294" />
+                    <picture>
+                      <source
+                        srcset="
+                          ./images/portfolio/project-four-desktop.webp    1x,
+                          ./images/portfolio/project-four-desktop@2x.webp 2x
+                        "
+                        media="(min-width: 1200px)"
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="
+                          ./images/portfolio/project-four-desktop.jpg    1x,
+                          ./images/portfolio/project-four-desktop@2x.jpg 2x
+                        "
+                        media="(min-width: 1200px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/portfolio/project-four-tablet.webp    1x,
+                          ./images/portfolio/project-four-tablet@2x.webp 2x
+                        "
+                        media="(min-width: 768px)"
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="
+                          ./images/portfolio/project-four-tablet.jpg    1x,
+                          ./images/portfolio/project-four-tablet@2x.jpg 2x
+                        "
+                        media="(min-width: 768px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/portfolio/project-four-mobile.webp    1x,
+                          ./images/portfolio/project-four-mobile@2x.webp 2x
+                        "
+                        media="(max-width: 767px)"
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="
+                          ./images/portfolio/project-four-mobile.jpg    1x,
+                          ./images/portfolio/project-four-mobile@2x.jpg 2x
+                        "
+                        media="(max-width: 767px)"
+                      />
+
+                      <img
+                        class=""
+                        src="./images/portfolio/project-four-desktop.jpg"
+                        alt="наушники"
+                      />
+                    </picture>
                     <div class="product__description">
                       <p>
                         Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та
@@ -246,16 +482,64 @@
                 </div>
               </a>
             </li>
-            <li class="grid__item">
+            <li class="grid__item apps">
               <a href="" class="product">
                 <div class="product__content">
                   <div class="product__image">
-                    <img
-                      src="./images/projectfive.jpg"
-                      alt="дві коробки"
-                      width="370"
-                      height="294"
-                    />
+                    <picture>
+                      <source
+                        srcset="
+                          ./images/portfolio/project-five-desktop.webp    1x,
+                          ./images/portfolio/project-five-desktop@2x.webp 2x
+                        "
+                        media="(min-width: 1200px)"
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="
+                          ./images/portfolio/project-five-desktop.jpg    1x,
+                          ./images/portfolio/project-five-desktop@2x.jpg 2x
+                        "
+                        media="(min-width: 1200px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/portfolio/project-five-tablet.webp    1x,
+                          ./images/portfolio/project-five-tablet@2x.webp 2x
+                        "
+                        media="(min-width: 768px)"
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="
+                          ./images/portfolio/project-five-tablet.jpg    1x,
+                          ./images/portfolio/project-five-tablet@2x.jpg 2x
+                        "
+                        media="(min-width: 768px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/portfolio/project-five-mobile.webp    1x,
+                          ./images/portfolio/project-five-mobile@2x.webp 2x
+                        "
+                        media="(max-width: 767px)"
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="
+                          ./images/portfolio/project-five-mobile.jpg    1x,
+                          ./images/portfolio/project-five-mobile@2x.jpg 2x
+                        "
+                        media="(max-width: 767px)"
+                      />
+
+                      <img
+                        class=""
+                        src="./images/portfolio/project-five-desktop.jpg"
+                        alt="дві коробки"
+                      />
+                    </picture>
+
                     <div class="product__description">
                       <p>
                         Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та
@@ -271,16 +555,64 @@
                 </div>
               </a>
             </li>
-            <li class="grid__item">
+            <li class="grid__item websites">
               <a href="" class="product">
                 <div class="product__content">
                   <div class="product__image">
-                    <img
-                      src="./images/projectsix.jpg"
-                      alt="монітор комп'ютера"
-                      width="370"
-                      height="294"
-                    />
+                    <picture>
+                      <source
+                        srcset="
+                          ./images/portfolio/project-six-desktop.webp    1x,
+                          ./images/portfolio/project-six-desktop@2x.webp 2x
+                        "
+                        media="(min-width: 1200px)"
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="
+                          ./images/portfolio/project-six-desktop.jpg    1x,
+                          ./images/portfolio/project-six-desktop@2x.jpg 2x
+                        "
+                        media="(min-width: 1200px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/portfolio/project-six-tablet.webp    1x,
+                          ./images/portfolio/project-six-tablet@2x.webp 2x
+                        "
+                        media="(min-width: 768px)"
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="
+                          ./images/portfolio/project-six-tablet.jpg    1x,
+                          ./images/portfolio/project-six-tablet@2x.jpg 2x
+                        "
+                        media="(min-width: 768px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/portfolio/project-six-mobile.webp    1x,
+                          ./images/portfolio/project-six-mobile@2x.webp 2x
+                        "
+                        media="(max-width: 767px)"
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="
+                          ./images/portfolio/project-six-mobile.jpg    1x,
+                          ./images/portfolio/project-six-mobile@2x.jpg 2x
+                        "
+                        media="(max-width: 767px)"
+                      />
+
+                      <img
+                        class=""
+                        src="./images/portfolio/project-six-desktop.jpg"
+                        alt="монітор комп'ютера"
+                      />
+                    </picture>
+
                     <div class="product__description">
                       <p>
                         Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та
@@ -296,16 +628,64 @@
                 </div>
               </a>
             </li>
-            <li class="grid__item">
+            <li class="grid__item design">
               <a href="" class="product">
                 <div class="product__content">
                   <div class="product__image">
-                    <img
-                      src="./images/projectseven.jpg"
-                      alt="розгортка журналу"
-                      width="370"
-                      height="294"
-                    />
+                    <picture>
+                      <source
+                        srcset="
+                          ./images/portfolio/project-seven-desktop.webp    1x,
+                          ./images/portfolio/project-seven-desktop@2x.webp 2x
+                        "
+                        media="(min-width: 1200px)"
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="
+                          ./images/portfolio/project-seven-desktop.jpg    1x,
+                          ./images/portfolio/project-seven-desktop@2x.jpg 2x
+                        "
+                        media="(min-width: 1200px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/portfolio/project-seven-tablet.webp    1x,
+                          ./images/portfolio/project-seven-tablet@2x.webp 2x
+                        "
+                        media="(min-width: 768px)"
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="
+                          ./images/portfolio/project-seven-tablet.jpg    1x,
+                          ./images/portfolio/project-seven-tablet@2x.jpg 2x
+                        "
+                        media="(min-width: 768px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/portfolio/project-seven-mobile.webp    1x,
+                          ./images/portfolio/project-seven-mobile@2x.webp 2x
+                        "
+                        media="(max-width: 767px)"
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="
+                          ./images/portfolio/project-seven-mobile.jpg    1x,
+                          ./images/portfolio/project-seven-mobile@2x.jpg 2x
+                        "
+                        media="(max-width: 767px)"
+                      />
+
+                      <img
+                        class=""
+                        src="./images/portfolio/project-seven-desktop.jpg"
+                        alt="розгортка журналу"
+                      />
+                    </picture>
+
                     <div class="product__description">
                       <p>
                         Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та
@@ -321,16 +701,64 @@
                 </div>
               </a>
             </li>
-            <li class="grid__item">
+            <li class="grid__item marketing">
               <a href="" class="product">
                 <div class="product__content">
                   <div class="product__image">
-                    <img
-                      src="./images/projecteight.jpg"
-                      alt="брендована етикетка"
-                      width="370"
-                      height="294"
-                    />
+                    <picture>
+                      <source
+                        srcset="
+                          ./images/portfolio/project-eight-desktop.webp    1x,
+                          ./images/portfolio/project-eight-desktop@2x.webp 2x
+                        "
+                        media="(min-width: 1200px)"
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="
+                          ./images/portfolio/project-eight-desktop.jpg    1x,
+                          ./images/portfolio/project-eight-desktop@2x.jpg 2x
+                        "
+                        media="(min-width: 1200px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/portfolio/project-eight-tablet.webp    1x,
+                          ./images/portfolio/project-eight-tablet@2x.webp 2x
+                        "
+                        media="(min-width: 768px)"
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="
+                          ./images/portfolio/project-eight-tablet.jpg    1x,
+                          ./images/portfolio/project-eight-tablet@2x.jpg 2x
+                        "
+                        media="(min-width: 768px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/portfolio/project-eight-mobile.webp    1x,
+                          ./images/portfolio/project-eight-mobile@2x.webp 2x
+                        "
+                        media="(max-width: 767px)"
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="
+                          ./images/portfolio/project-eight-mobile.jpg    1x,
+                          ./images/portfolio/project-eight-mobile@2x.jpg 2x
+                        "
+                        media="(max-width: 767px)"
+                      />
+
+                      <img
+                        class=""
+                        src="./images/portfolio/project-eight-desktop.jpg"
+                        alt="брендована етикетка"
+                      />
+                    </picture>
+
                     <div class="product__description">
                       <p>
                         Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та
@@ -346,16 +774,64 @@
                 </div>
               </a>
             </li>
-            <li class="grid__item">
+            <li class="grid__item apps">
               <a href="" class="product">
                 <div class="product__content">
                   <div class="product__image">
-                    <img
-                      src="./images/projectnine.jpg"
-                      alt="людина здійснює пошук в додатку на ноутбуці"
-                      width="370"
-                      height="294"
-                    />
+                    <picture>
+                      <source
+                        srcset="
+                          ./images/portfolio/project-nine-desktop.webp    1x,
+                          ./images/portfolio/project-nine-desktop@2x.webp 2x
+                        "
+                        media="(min-width: 1200px)"
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="
+                          ./images/portfolio/project-nine-desktop.jpg    1x,
+                          ./images/portfolio/project-nine-desktop@2x.jpg 2x
+                        "
+                        media="(min-width: 1200px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/portfolio/project-nine-tablet.webp    1x,
+                          ./images/portfolio/project-nine-tablet@2x.webp 2x
+                        "
+                        media="(min-width: 768px)"
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="
+                          ./images/portfolio/project-nine-tablet.jpg    1x,
+                          ./images/portfolio/project-nine-tablet@2x.jpg 2x
+                        "
+                        media="(min-width: 768px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/portfolio/project-nine-mobile.webp    1x,
+                          ./images/portfolio/project-nine-mobile@2x.webp 2x
+                        "
+                        media="(max-width: 767px)"
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="
+                          ./images/portfolio/project-nine-mobile.jpg    1x,
+                          ./images/portfolio/project-nine-mobile@2x.jpg 2x
+                        "
+                        media="(max-width: 767px)"
+                      />
+
+                      <img
+                        class=""
+                        src="./images/portfolio/project-nine-desktop.jpg"
+                        alt="людина здійснює пошук в додатку на ноутбуці"
+                      />
+                    </picture>
+
                     <div class="product__description">
                       <p>
                         Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та
@@ -463,5 +939,7 @@
         </div>
       </div>
     </footer>
+    <script src="./js/filter.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
