@@ -452,6 +452,9 @@ img {
     text-align: left;
   }
 }
+.footer__form-wrapper {
+  width: 100%;
+}
 .footer__text {
   margin-bottom: 20px;
   font-weight: 700;
@@ -483,14 +486,30 @@ img {
   }
 }
 .footer__input {
-  padding-left: 16px;
+  width: calc(100% - 30px);
+  padding: 16px;
   height: 50px;
   background-color: #2f303a;
   color: #757575;
+  -webkit-transition-property: border-color;
+  transition-property: border-color;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   border: 1px solid rgba(255, 255, 255, 0.3);
   -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
           filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
+}
+.footer__input:focus {
+  border-color: #2196f3;
+  outline: none;
+}
+@media screen and (max-width: 480px) {
+  .footer__input {
+    width: 100%;
+  }
 }
 @media screen and (min-width: 480px) {
   .footer__input {
@@ -719,6 +738,12 @@ img {
   background-color: #ffffff;
   -webkit-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
           box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
+  -webkit-transition-property: display;
+  transition-property: display;
+  -webkit-transition-duration: 1000ms;
+          transition-duration: 1000ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .mobile-menu.is-open {
   display: -webkit-box;
@@ -767,7 +792,7 @@ img {
 .mobile-menu__link {
   display: block;
   font-weight: 500;
-  font-size: 40px;
+  font-size: 36px;
   line-height: 1.17;
   letter-spacing: 0.02em;
   text-decoration: none;
@@ -778,6 +803,11 @@ img {
           transition-duration: 250ms;
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (min-width: 480px) {
+  .mobile-menu__link {
+    font-size: 40px;
+  }
 }
 .mobile-menu__link:hover, .mobile-menu__link:focus {
   color: #2196f3;
@@ -793,7 +823,7 @@ img {
   margin-bottom: 64px;
 }
 .mobile-menu__tel {
-  font-size: 34px;
+  font-size: 30px;
   color: #2196f3;
   -webkit-transition-property: fill;
   transition-property: fill;
@@ -802,11 +832,16 @@ img {
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+@media screen and (min-width: 480px) {
+  .mobile-menu__tel {
+    font-size: 34px;
+  }
+}
 .mobile-menu__tel:hover, .mobile-menu__tel:focus {
   color: #757575;
 }
 .mobile-menu__mail {
-  font-size: 24px;
+  font-size: 20px;
   color: #757575;
   -webkit-transition-property: fill;
   transition-property: fill;
@@ -814,6 +849,11 @@ img {
           transition-duration: 250ms;
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (min-width: 480px) {
+  .mobile-menu__mail {
+    font-size: 24px;
+  }
 }
 .mobile-menu__mail:hover, .mobile-menu__mail:focus {
   color: #2196f3;
@@ -830,7 +870,7 @@ img {
 }
 .mobile-menu__social-link {
   padding-right: 10px;
-  font-size: 18px;
+  font-size: 12px;
   line-height: 1.22;
   color: #2196f3;
   -webkit-transition-property: fill;
@@ -839,6 +879,11 @@ img {
           transition-duration: 250ms;
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (min-width: 480px) {
+  .mobile-menu__social-link {
+    font-size: 18px;
+  }
 }
 .mobile-menu__social-link:hover, .mobile-menu__social-link:focus {
   color: #757575;
@@ -853,8 +898,10 @@ img {
   height: 100%;
   -webkit-transition-property: opacity, visibility;
   transition-property: opacity, visibility;
-  -webkit-transition-duration: 250ms;
-          transition-duration: 250ms;
+  -webkit-transition-duration: 1000ms;
+          transition-duration: 1000ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   background-color: rgba(0, 0, 0, 0.2);
 }
 
