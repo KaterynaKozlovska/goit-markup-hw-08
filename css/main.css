@@ -452,8 +452,10 @@ img {
     text-align: left;
   }
 }
-.footer__form-wrapper {
-  width: 100%;
+@media screen and (max-width: 1199px) {
+  .footer__form-wrapper {
+    width: 100%;
+  }
 }
 .footer__text {
   margin-bottom: 20px;
