@@ -6,6 +6,9 @@ body {
   letter-spacing: 0.03em;
   margin: 0 auto;
 }
+body.modal-open {
+  overflow: hidden;
+}
 
 ul {
   list-style: none;
@@ -867,13 +870,14 @@ img {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  width: 450px;
+  max-width: 450px;
+  width: calc(100% - 30px);
   background-color: #ffffff;
   overflow-y: scroll;
 }
 @media screen and (min-width: 1200px) {
   .modal {
-    width: 528px;
+    max-width: 528px;
   }
 }
 .modal__close-button {
@@ -898,12 +902,17 @@ img {
   fill: #2196f3;
 }
 .modal__title {
-  width: 370px;
+  width: calc(100% - 80px);
   margin: 40px auto 12px;
   text-align: center;
   font-weight: 700;
   font-size: 20px;
   line-height: 1.15;
+}
+@media screen and (min-width: 480px) {
+  .modal__title {
+    width: 370px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .modal__title {
@@ -982,6 +991,15 @@ img {
 
 /* Checkbox */
 .checkbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: relative;
   margin-bottom: 30px;
 }

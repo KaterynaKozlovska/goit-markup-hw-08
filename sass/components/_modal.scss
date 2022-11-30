@@ -23,13 +23,14 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 450px;
-  // height: 581px;
+  max-width: 450px;
+  width: calc(100% - 30px);
+
   background-color: $white-color;
   overflow-y: scroll;
 
   @media screen and (min-width: $desktop) {
-    width: 528px;
+    max-width: 528px;
   }
 
   &__close-button {
@@ -56,13 +57,17 @@
   }
 
   &__title {
-    width: 370px;
+    width: calc(100% - 80px);
     margin: 40px auto 12px;
     text-align: center;
 
     font-weight: 700;
     font-size: 20px;
     line-height: 1.15;
+
+    @media screen and (min-width: $mobile) {
+      width: 370px;
+    }
 
     @media screen and (min-width: $desktop) {
       width: 448px;
@@ -143,6 +148,9 @@
 
 /* Checkbox */
 .checkbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
   margin-bottom: 30px;
 
